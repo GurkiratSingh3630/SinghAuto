@@ -1,0 +1,74 @@
+extends layouts/layout
+
+block content
+  .book-page
+    h1 Book an Appointment
+    p.muted.centered-text Tell us about your vehicle and what you need done.
+    if bookVisits && bookVisits > 1
+      p.muted.centered-text.small-session-note You have visited this booking page #{bookVisits} times in this session.
+
+    .book-card
+      form.book-form(action="/book", method="post", enctype="multipart/form-data")
+        .form-group
+          label(for="name") Name
+          input#name(type="text", name="name", required)
+
+        .form-group
+          label(for="phone") Phone
+          input#phone(type="text", name="phone", required, placeholder="+1 (204) 555-0123")
+
+        .form-group
+          label(for="yearSelect") Year
+          .select-wrapper
+            select(name="year", id="yearSelect", required)
+              option(value="") Select year
+
+        .form-group
+          label(for="makeSelect") Make
+          .select-wrapper
+            select(name="make", id="makeSelect", required, disabled)
+              option(value="") Select make
+
+        .form-group
+          label(for="modelSelect") Model
+          .select-wrapper
+            select(name="model", id="modelSelect", required, disabled)
+              option(value="") Select model
+
+        input(type="hidden", name="vehicle", id="vehicleHidden")
+
+        .form-group
+          label(for="serviceSelect") Service
+          .select-wrapper
+            select(name="service", id="serviceSelect", required)
+              option(value="") -- Select a service --
+              option(value="Oil Change") Oil Change
+              option(value="Tire Swap / Balance") Tire Swap / Balance
+              option(value="Brake Service") Brake Service
+              option(value="Inspection / Other") Inspection / Other
+
+        .price-estimate
+          h3 Estimated Price
+          p#priceEstimateText.estimate-value Select a service and vehicle to see an estimated price range.
+          p.estimate-note.muted Estimate shown before tax and may change after inspection.
+
+        .form-group
+          label(for="date") Preferred Date
+          input#date(type="date", name="date", required)
+
+        .form-group
+          label(for="notes") Notes
+          textarea#notes(name="notes", rows="3", placeholder="Any extra details or concerns?")
+
+        .form-group
+          label(for="photo") Upload Photo (optional)
+          input#photo(type="file", name="photo")
+
+        .form-actions
+          button.btn(type="submit") Submit Request
+
+    p.muted.centered-text
+      | Prefer to call instead? 
+      a(href="tel:+12045550123") +1 (204) 555-0123
+
+  script(src="/js/book.js")

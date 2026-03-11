@@ -1,0 +1,64 @@
+extends layouts/layout
+
+block content
+  h1 Contact Us
+  p.muted We’ll get back to you quickly during business hours.
+
+  section.info-grid
+    .contact-card
+      h3 Visit
+      p
+        strong Singh Auto
+        br
+        | 1234 Portage Ave
+        br
+        | Winnipeg, MB R3G 0W4
+      p
+        a.btn.secondary(
+          href="https://maps.google.com/?q=1234+Portage+Ave,+Winnipeg+MB",
+          target="_blank",
+          rel="noopener"
+        ) Open in Google Maps
+
+    .contact-card
+      h3 Hours
+      ul.hours
+        li
+          span Mon–Fri
+          span 9:00–18:00
+        li
+          span Sat
+          span 10:00–16:00
+        li
+          span Sun
+          span Closed
+      p.muted Holiday hours may vary.
+
+    .contact-card
+      h3 Contact
+      p
+        strong Phone:
+        |  
+        a(href="tel:+12045550123") +1 (204) 555-0123
+        br
+        strong Email:
+        |  
+        a(href="mailto:info@singhauto.ca") info@singhauto.ca
+      p
+        a.btn(href="/book") Book an Appointment
+
+  section.contact-form-section
+    h2 Send a Message
+    form(action="/contact", method="post", class="form")
+      label Name
+        input(name="name", required)
+      label Email
+        input(type="email", name="email", required)
+      label Phone (optional)
+        input(name="phone", placeholder="+1 (204) 555-0123")
+      label Message
+        textarea(name="message", rows="4", required, placeholder="How can we help?")
+      button.btn(type="submit") Send Message
+    p.muted
+      | Prefer email? Write to 
+      a(href="mailto:info@singhauto.ca") info@singhauto.ca

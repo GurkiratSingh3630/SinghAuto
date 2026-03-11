@@ -1,0 +1,17 @@
+extends layouts/layout
+
+block content
+  h1 Booking Submitted
+  p Thank you for your request. We will contact you shortly.
+
+  h3 Summary
+  ul
+    li Name: #{data.name}
+    li Phone: #{data.phone}
+    li Vehicle: #{data.vehicle}
+    li Service: #{data.service}
+    li Date: #{data.date.toDateString ? data.date.toDateString() : data.date}
+    if data.notes
+      li Notes: #{data.notes}
+
+  a.btn(href="/") Back to Home

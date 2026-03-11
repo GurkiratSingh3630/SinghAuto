@@ -1,0 +1,51 @@
+extends layouts/layout
+
+block content
+  h2 Fast, Reliable auto service in Winnipeg
+  p Oil changes, tire services, brakes, and basic mechanic work.
+
+  h3 Popular Services
+  ul.cards
+    li
+      a.card-link(href="/services/oil-change")
+        img.card-img(src="/images/services/oil.jpg", alt="Oil Change service")
+        .card-header
+          h4.card-title Full Synthetic Oil Change
+          p.card-price $89+
+        .card-sub
+          p Premium oil & filter. Quick turnaround.
+    li
+      a.card-link(href="/services/tire-service")
+        img.card-img(src="/images/services/tires.jpg", alt="Tire service")
+        .card-header
+          h4.card-title Tire Swap & Balance
+          p.card-price $69+
+        .card-sub
+          p Seasonal changeovers, balancing, puncture repairs.
+    li
+      a.card-link(href="/services/brake-service")
+        img.card-img(src="/images/services/brakes.jpg", alt="Brake service")
+        .card-header
+          h4.card-title Brake Pads & Inspection
+          p.card-price $149+
+        .card-sub
+          p OEM pads, rotor checks, fluid & full safety inspection.
+
+  p
+    a.btn(href="/book") Book an appointment
+
+  section.testimonials
+    h2 What Our Customers Say
+    blockquote “Quick, friendly, and honest service! My car was done faster than promised.” — Raj K.
+    blockquote “I’ve been coming here for two years. Singh Auto always treats customers like family.” — Emily W.
+    blockquote “Transparent pricing, quality parts, and great staff — highly recommend!” — James P.
+
+  if bookings && bookings.length
+    section
+      h3 Recent Bookings
+      ul
+        each b in bookings
+          li
+            strong= b.name
+            |  – #{b.vehicle} (#{b.service}) on 
+            = b.date.toDateString ? b.date.toDateString() : b.date

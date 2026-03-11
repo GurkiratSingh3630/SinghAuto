@@ -1,0 +1,15 @@
+extends ../layouts/layout
+
+block content
+  h1 Admin Login
+  if error
+    p.error= error
+  form(action="/login", method="post")
+    label Email
+      input(type="email", name="email", required)
+    label Password
+      input(type="password", name="password", required)
+    button.btn(type="submit") Log In
+  p.muted
+    | First time? 
+    a(href="/register") Register admin

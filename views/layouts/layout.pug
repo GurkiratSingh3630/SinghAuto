@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title= title
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="icon", type="image/png", href="/images/logo.png")
+    meta(name="theme-color", content="#151a22")
+  body
+    header.top
+      .brand
+        img.logo(src="/images/logo.png", alt="Singh Auto logo")
+        span Singh Auto
+      nav
+        a(href="/") Home
+        a(href="/services/oil-change") Services
+        a(href="/book") Book
+        a(href="/about") About
+        a(href="/contact") Contact
+        if currentUserEmail
+          a(href="/admin") Admin
+          a(href="/logout") Logout
+        else
+          a(href="/login") Admin Login
+
+    main.wrap
+      if message
+        .flash= message
+      block content
+
+    footer.site-footer.pro
+      .wrap.footer-columns
+        .footer-col
+          .footer-brandline
+            img.logo(src="/images/logo.png", alt="Singh Auto")
+            strong Singh Auto
+          p.muted Oil • Tires • Brakes • General Service
+
+        .footer-col
+          h4 Contact
+          ul
+            li
+              a(href="tel:+12045550123") +1 (204) 555-0123
+            li
+              a(href="mailto:info@singhauto.ca") info@singhauto.ca
+            li
+              span.muted Winnipeg, MB
+            li
+              span.muted Mon–Fri 9–8 · Sat 10–6
+
+      .footer-bottom
+        .wrap
+          span
+            | © 
+            span#year
+            |  Singh Auto
+          span.policy-links
+            a(href="#") Privacy
+            a(href="#") Terms
+
+    script.
+      document.getElementById('year').textContent = new Date().getFullYear();

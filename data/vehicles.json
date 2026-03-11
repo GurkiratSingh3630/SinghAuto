@@ -1,0 +1,50 @@
+{
+  "2015": {
+    "Toyota": ["Corolla", "Camry", "RAV4"],
+    "Honda": ["Civic", "Accord", "CR-V"],
+    "Ford": ["Focus", "Fusion", "Escape"],
+    "Hyundai": ["Elantra", "Sonata", "Tucson"],
+    "Nissan": ["Sentra", "Altima", "Rogue"],
+    "BMW": ["3 Series", "5 Series", "X3"]
+  },
+  "2018": {
+    "Toyota": ["Corolla", "Camry", "RAV4"],
+    "Honda": ["Civic", "Accord", "CR-V"],
+    "Ford": ["Fiesta", "Fusion", "Escape"],
+    "Hyundai": ["Elantra", "Sonata", "Kona"],
+    "Nissan": ["Sentra", "Altima", "Qashqai"],
+    "BMW": ["2 Series", "3 Series", "X1"]
+  },
+  "2020": {
+    "Toyota": ["Corolla", "Camry", "RAV4", "Highlander"],
+    "Honda": ["Civic", "Accord", "CR-V", "Pilot"],
+    "Ford": ["Fusion", "Escape", "Edge"],
+    "Hyundai": ["Elantra", "Sonata", "Tucson", "Palisade"],
+    "Nissan": ["Sentra", "Altima", "Rogue"],
+    "BMW": ["3 Series", "5 Series", "X3", "X5"]
+  },
+  "2022": {
+    "Toyota": ["Corolla", "Camry", "RAV4", "Highlander"],
+    "Honda": ["Civic", "Accord", "CR-V", "HR-V"],
+    "Ford": ["Escape", "Edge", "Bronco Sport"],
+    "Hyundai": ["Elantra", "Sonata", "Tucson", "Santa Fe"],
+    "Nissan": ["Sentra", "Altima", "Rogue", "Pathfinder"],
+    "BMW": ["2 Series", "3 Series", "X3", "X5"]
+  },
+  "2024": {
+    "Toyota": ["Corolla", "Camry", "RAV4", "Prius"],
+    "Honda": ["Civic", "Accord", "CR-V", "HR-V"],
+    "Ford": ["Escape", "Bronco Sport", "Maverick"],
+    "Hyundai": ["Elantra", "Sonata", "Tucson", "Kona"],
+    "Nissan": ["Sentra", "Altima", "Rogue", "Ariya"],
+    "BMW": ["i4", "3 Series", "X3", "X5"]
+  },
+  "2025": {
+    "Toyota": ["Corolla", "Camry", "RAV4", "Grand Highlander"],
+    "Honda": ["Civic", "Accord", "CR-V", "Prologue"],
+    "Ford": ["Escape", "Bronco Sport", "Maverick"],
+    "Hyundai": ["Elantra", "Ioniq 6", "Tucson", "Santa Fe"],
+    "Nissan": ["Sentra", "Altima", "Rogue"],
+    "BMW": ["i4", "3 Series", "X3", "X5"]
+  }
+}
